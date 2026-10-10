@@ -95,3 +95,18 @@ function z6(str) { // задание 6
     }
     return result;
 }
+function z7(str) { // задание 7
+    let result = [];
+    for (let i = 0; i < str.length; i++) {
+        let currentWord = "";
+        if(str[i] === " ") {
+            continue;
+        }
+        currentWord += str.slice(0, i) + str[i].toUpperCase();
+        for(let j = i + 1; j < str.length; j++) {
+            currentWord += str[j].toLowerCase();
+        }
+        result.push(currentWord);
+    }
+    return result;
+}
