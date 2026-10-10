@@ -63,3 +63,28 @@ function z3(year) // задание 3
     default: return century + "th";
   }
 }
+function  z4(list) { // задание 4
+  const step = (list[list.length - 1] - list[0]) / list.length;
+
+  for (let i = 0; i < list.length - 1; i++) {
+    if (list[i + 1] - list[i] !== step) {
+      return list[i] + step;
+    }
+  }
+}
+function z5(n){ // задание 5
+    let result = "";
+    let current = 2;
+    for(let i = 1; i <= n; i++) {
+        let count = 0;
+        while(n % current === 0) {
+            n /= current;
+            ++count;
+        }  
+        if(count !== 0){
+            result += `(${current}` + (count === 1 ? `)` : `**${count})`);
+        }
+        ++current;
+    }
+    return result;
+}
