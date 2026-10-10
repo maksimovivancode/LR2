@@ -88,3 +88,10 @@ function z5(n){ // задание 5
     }
     return result;
 }
+function z6(str) { // задание 6
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+    i % 2 === 0 ? result += str[i].toUpperCase() : result += str[i].toLowerCase();
+    }
+    return result;
+}
